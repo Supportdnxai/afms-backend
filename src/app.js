@@ -1,5 +1,6 @@
-import express from "express";
 import dotenv from "dotenv";
+dotenv.config();
+import express from "express";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
@@ -7,7 +8,6 @@ import dealerRoutes from "./routes/dealerRoutes.js";
 import farmerRoutes from "./routes/farmerRoutes.js";
 import maoRoutes from "./routes/maoRoutes.js";
 
-dotenv.config();
 connectDB();
 
 const app = express();
@@ -33,3 +33,4 @@ app.get("/", (req, res) => {
 });
 
 export default app;
+
